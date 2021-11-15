@@ -27,6 +27,7 @@ Game::Game() :
 	setupSprite(); // load texture
 
 	m_menu.initialise(m_ArialBlackfont);
+	m_shop.initialise(m_ArialBlackfont);
 }
 
 Game::~Game()
@@ -66,7 +67,18 @@ void Game::update(sf::Time t_deltaTime)
 	{
 		m_window.close();
 	}
-	m_menu.update(m_window);
+	switch (m_gameState)
+	{
+	case GameState::GAME_MENU:
+		m_menu.update(m_window);
+
+		break;
+
+	case GameState::GAME_SHOP:
+		m_shop.update(m_window);
+
+		break;
+	}
 }
 
 /// <summary>
@@ -101,10 +113,10 @@ void Game::render()
 		std::cout << "Game Play" << std::endl;
 
 		break;
-
+		 
 	case GameState::GAME_SHOP:
-
-		std::cout << "Game Shop" << std::endl;
+		m_shop.draw(m_window);
+		//std::cout << "Game Shop" << std::endl;
 
 		break;
 

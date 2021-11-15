@@ -5,6 +5,7 @@
 #include <SFML/Graphics.hpp>
 #include "GameState.h"
 #include "Menu.h"
+#include "Shop.h"
 
 class Game
 {
@@ -18,6 +19,7 @@ private:
 	// instances
 	GameState m_gameState;
 	Menu m_menu;
+	Shop m_shop;
 
 	void update(sf::Time t_deltaTime);
 	void render();
