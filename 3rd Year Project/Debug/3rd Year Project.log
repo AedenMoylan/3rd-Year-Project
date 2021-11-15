@@ -1,2 +1,3 @@
-﻿  Shop.cpp
-  3rd Year Project.vcxproj -> C:\Users\gameuser\Desktop\third year project\3rd-Year-Project\Debug\3rd Year Project.exe
+﻿  Controls.cpp
+G:\nastava\3rd-Year-Project\3rd Year Project\Controls.cpp(15,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  3rd Year Project.vcxproj -> G:\nastava\3rd-Year-Project\Debug\3rd Year Project.exe

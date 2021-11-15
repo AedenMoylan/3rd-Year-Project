@@ -28,6 +28,7 @@ Game::Game() :
 
 	m_menu.initialise(m_ArialBlackfont);
 	m_shop.initialise(m_ArialBlackfont);
+	m_controls.initialise(m_ArialBlackfont);
 }
 
 Game::~Game()
@@ -78,6 +79,9 @@ void Game::update(sf::Time t_deltaTime)
 		m_shop.update(m_window);
 
 		break;
+		
+	case GameState::GAME_CONTROLS:
+		m_controls.update(m_window);
 	}
 }
 
@@ -121,7 +125,7 @@ void Game::render()
 		break;
 
 	case GameState::GAME_CONTROLS:
-
+		m_controls.draw(m_window);
 		std::cout << "Game Controls" << std::endl;
 
 		break;

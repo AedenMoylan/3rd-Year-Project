@@ -6,6 +6,7 @@
 #include "GameState.h"
 #include "Menu.h"
 #include "Shop.h"
+#include "Controls.h"
 
 class Game
 {
@@ -20,6 +21,7 @@ private:
 	GameState m_gameState;
 	Menu m_menu;
 	Shop m_shop;
+	Controls m_controls;
 
 	void update(sf::Time t_deltaTime);
 	void render();

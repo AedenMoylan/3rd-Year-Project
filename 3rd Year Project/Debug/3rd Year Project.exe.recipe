@@ -2,15 +2,15 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\gameuser\Desktop\third year project\3rd-Year-Project\Debug\3rd Year Project.exe</FullPath>
+      <FullPath>G:\nastava\3rd-Year-Project\Debug\3rd Year Project.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles>
     <ContentFile>
-      <FullPath>C:\Users\gameuser\Desktop\third year project\3rd-Year-Project\3rd Year Project\ASSETS\FONTS\ariblk.ttf</FullPath>
+      <FullPath>G:\nastava\3rd-Year-Project\3rd Year Project\ASSETS\FONTS\ariblk.ttf</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\gameuser\Desktop\third year project\3rd-Year-Project\3rd Year Project\ASSETS\IMAGES\SFML-LOGO.png</FullPath>
+      <FullPath>G:\nastava\3rd-Year-Project\3rd Year Project\ASSETS\IMAGES\SFML-LOGO.png</FullPath>
     </ContentFile>
   </ContentFiles>
   <SatelliteDlls />
