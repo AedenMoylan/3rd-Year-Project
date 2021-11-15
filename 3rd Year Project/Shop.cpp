@@ -20,10 +20,11 @@ void Shop::initialise(sf::Font& font)
 	m_leftOffset = 100;
 	m_buttonHeight = 70;
 	int textDropOffset = 50;
+	int textOffset = 75;
 	m_font = font;
 
 
-	sf::String m_shopMenuTexts[] = { "Speed", "Armor"};
+	sf::String m_shopMenuTexts[] = { "Speed", "Armor", "Empty", "Empty", "Back"};
 
 	/// for loop to setup menu buttons in an array
 	for (int i = 0; i < m_optionCount; i++)
@@ -37,8 +38,7 @@ void Shop::initialise(sf::Font& font)
 		m_buttonTexts[i].setFillColor(sf::Color::White);
 		m_buttonTexts[i].setCharacterSize(22);
 		sf::FloatRect textSize = m_buttonTexts[i].getGlobalBounds();
-		float textOffset = (m_buttonWidth - textSize.width) / 2;
-		m_buttonTexts[i].setPosition(m_leftOffset + (textOffset * i), m_verticalSpacing + textDropOffset);
+		m_buttonTexts[i].setPosition(m_leftOffset * (i * 2) + textOffset/*+ (textOffset * i + 25)*/, m_verticalSpacing + textDropOffset);
 	}
 }
 
@@ -60,6 +60,38 @@ void Shop::update(sf::RenderWindow& window)
 			{
 				selectionNumber = 2;
 				std::cout << "Armor Acquired" << std::endl;
+			}
+			if (mouseLocation.x < m_leftOffset * 6 && mouseLocation.x > m_leftOffset * 4)
+			{
+				selectionNumber = 3;
+				std::cout << "Empty 1" << std::endl;
+			}
+			if (mouseLocation.x < m_leftOffset * 8 && mouseLocation.x > m_leftOffset * 6)
+			{
+				selectionNumber = 4;
+				std::cout << "Empty 2" << std::endl;
+			}
+			if (mouseLocation.x < m_leftOffset * 10 && mouseLocation.x > m_leftOffset * 8)
+			{
+				selectionNumber = 5;
+				myGameState = GameState::GAME_PLAY;
+			}
+
+			if (selectionNumber == 1)
+			{
+
+			}
+			else if (selectionNumber == 2)
+			{
+
+			}
+			else if (selectionNumber == 3)
+			{
+
+			}
+			else if (selectionNumber == 4)
+			{
+
 			}
 
 			std::cout << selectionNumber << std::endl;

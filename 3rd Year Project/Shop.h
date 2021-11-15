@@ -13,7 +13,7 @@ class Shop
 	int selectionNumber = 0;
 
 	/// Number of buttons on our menu
-	static const int m_optionCount = 2;
+	static const int m_optionCount = 5;
 	/// green button background
 	sf::Texture m_buttonTexture;
 	/// array of sprites used to display buttons
