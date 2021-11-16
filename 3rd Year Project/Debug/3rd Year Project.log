@@ -1,8 +1,17 @@
-﻿  GamePlay.cpp
-C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\3rd year joint project\3rd-Year-Project\3rd Year Project\GamePlay.h(15,18): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\3rd year joint project\3rd-Year-Project\3rd Year Project\GamePlay.h(19,22): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\3rd year joint project\3rd-Year-Project\3rd Year Project\GamePlay.h(21,17): warning C4305: 'initializing': truncation from 'double' to 'const float'
-C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\3rd year joint project\3rd-Year-Project\3rd Year Project\GamePlay.cpp(12,36): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\3rd year joint project\3rd-Year-Project\3rd Year Project\GamePlay.cpp(19,20): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\3rd year joint project\3rd-Year-Project\3rd Year Project\GamePlay.cpp(20,20): warning C4305: '=': truncation from 'double' to 'float'
-  3rd Year Project.vcxproj -> C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\3rd year joint project\3rd-Year-Project\Debug\3rd Year Project.exe
+﻿  Game.cpp
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\third year project\3rd-Year-Project\3rd Year Project\GamePlay.h(15,18): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\third year project\3rd-Year-Project\3rd Year Project\GamePlay.h(19,22): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\third year project\3rd-Year-Project\3rd Year Project\GamePlay.h(21,17): warning C4305: 'initializing': truncation from 'double' to 'const float'
+  GamePlay.cpp
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\third year project\3rd-Year-Project\3rd Year Project\GamePlay.h(15,18): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\third year project\3rd-Year-Project\3rd Year Project\GamePlay.h(19,22): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\third year project\3rd-Year-Project\3rd Year Project\GamePlay.h(21,17): warning C4305: 'initializing': truncation from 'double' to 'const float'
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\third year project\3rd-Year-Project\3rd Year Project\GamePlay.cpp(13,36): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\third year project\3rd-Year-Project\3rd Year Project\GamePlay.cpp(19,20): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\third year project\3rd-Year-Project\3rd Year Project\GamePlay.cpp(20,20): warning C4305: '=': truncation from 'double' to 'float'
+  main.cpp
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\third year project\3rd-Year-Project\3rd Year Project\GamePlay.h(15,18): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\third year project\3rd-Year-Project\3rd Year Project\GamePlay.h(19,22): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\third year project\3rd-Year-Project\3rd Year Project\GamePlay.h(21,17): warning C4305: 'initializing': truncation from 'double' to 'const float'
+  Generating Code...
+  3rd Year Project.vcxproj -> C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\third year project\3rd-Year-Project\Debug\3rd Year Project.exe

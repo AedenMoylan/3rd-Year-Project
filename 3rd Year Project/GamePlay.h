@@ -11,8 +11,8 @@ class GamePlay
 	float deceleration;
 	float speed;
 	float angle;
-	float maxSpeed = 2;
-	float turnSpeed = 0.01;
+	float maxSpeed = 10;
+	float turnSpeed = 0.08;
 	float x = 300;
 	float y = 300;
 
