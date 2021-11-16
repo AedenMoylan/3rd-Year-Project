@@ -8,10 +8,10 @@ void GamePlay::initialise(sf::Font& font)
 	}
 
 	m_playerSprite.setTexture(m_playerTexture);
+	m_playerSprite.setOrigin(m_playerSprite.getGlobalBounds().width / 2 , m_playerSprite.getGlobalBounds().height / 2 );
 	m_playerSprite.setPosition(300, 300);
 	m_playerSprite.setScale(0.08, 0.08);
 	m_playerSprite.setRotation(-90);
-	m_playerSprite.setOrigin(/*m_playerSprite.getGlobalBounds().width / 2, m_playerSprite.getGlobalBounds().height / 2*/ 46, 96);
 
 
 
@@ -35,7 +35,11 @@ void GamePlay::draw(sf::RenderWindow& window)
 
 void GamePlay::update(sf::Window& window)
 {
-	carMovement();
+	isUpPressed = false;
+	isDownPressed = false;
+	isLeftPressed = false;
+	isRightPressed = false;
+
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 	{
@@ -56,6 +60,8 @@ void GamePlay::update(sf::Window& window)
 	{
 		isRightPressed = true;
 	}
+
+	carMovement();
 
 	m_playerSprite.setPosition(x, y);
 	m_playerSprite.setRotation(angle * 180 / PI);
