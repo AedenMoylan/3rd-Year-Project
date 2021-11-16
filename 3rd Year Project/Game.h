@@ -7,6 +7,7 @@
 #include "Menu.h"
 #include "Shop.h"
 #include "Controls.h"
+#include "GamePlay.h"
 
 class Game
 {
@@ -22,6 +23,7 @@ private:
 	Menu m_menu;
 	Shop m_shop;
 	Controls m_controls;
+	GamePlay m_gamePlay;
 
 	void update(sf::Time t_deltaTime);
 	void render();
