@@ -1,4 +1,5 @@
 #include "Controls.h"
+#include "GameState.h"
 
 void Controls::initialise(sf::Font& m_font)
 {
@@ -29,53 +30,44 @@ void Controls::initialise(sf::Font& m_font)
 	m_controlForward.setString("To move forward, press W");
 	m_controlForward.setFillColor(sf::Color::Blue);
 	m_controlForward.setCharacterSize(20);
-	m_controlForward.setPosition(450, 300);
+	m_controlForward.setPosition(500, 300);
 
 	// Backwards control
 	m_controlBackwards.setFont(m_font);
-	m_controlBackwards.setString("To move forward, press S");
+	m_controlBackwards.setString("To rotate right, press S");
 	m_controlBackwards.setFillColor(sf::Color::Blue);
 	m_controlBackwards.setCharacterSize(20);
-	m_controlBackwards.setPosition(450, 350);
+	m_controlBackwards.setPosition(500, 350);
 
 	// Left control
 	m_controlLeft.setFont(m_font);
-	m_controlLeft.setString("To move forward, press A");
+	m_controlLeft.setString("To rotate left, press A");
 	m_controlLeft.setFillColor(sf::Color::Red);
 	m_controlLeft.setCharacterSize(20);
-	m_controlLeft.setPosition(450, 400);
+	m_controlLeft.setPosition(500, 400);
 
 	// Right control
 	m_controlRight.setFont(m_font);
-	m_controlRight.setString("To move forward, press D");
+	m_controlRight.setString("To move backwards, press D");
 	m_controlRight.setFillColor(sf::Color::Red);
 	m_controlRight.setCharacterSize(20);
-	m_controlRight.setPosition(450, 450);
-
-	selection = 0;
+	m_controlRight.setPosition(500, 450);
 }
 
 void Controls::update(sf::Window& window)
 {
-
+	selectionNumber = 3;
 	if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left))
 	{
 		sf::Vector2i mouseLocation;
 		mouseLocation = sf::Mouse::getPosition(window);
 		if (mouseLocation.y > m_verticalSpacing + (m_buttonHeight / 2) && mouseLocation.y < m_verticalSpacing + (m_buttonHeight * 2))
 		{
-			if (mouseLocation.x < m_leftOffset * 2 && mouseLocation.x > 0)
+			if (mouseLocation.x < m_leftOffset * 1.4 && mouseLocation.x > 550)
 			{
-				selection = 1;
-				std::cout << "Speed Acquired" << std::endl;
+				selectionNumber = 4;
 			}
-		}
-
-		if (selection == 0)
-		{
-			// add code to switch back to the main menu
-			//myGameState
-			GameState::GAME_MENU;
+			//std::cout << "bababooey" << std::endl;
 		}
 	}
 }
@@ -92,4 +84,9 @@ void Controls::draw(sf::RenderWindow& window)
 	window.draw(m_controlBackwards);
 	window.draw(m_controlRight);
 	window.draw(m_controlLeft);
+}
+
+int Controls::getSelectionNumber()
+{
+	return selectionNumber;
 }

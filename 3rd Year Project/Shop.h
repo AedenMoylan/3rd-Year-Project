@@ -10,7 +10,7 @@ class Shop
 {
     GameState myGameState;
 	// used to select an upgrade
-	int selectionNumber = 0;
+	int selectionNumber = 2;
 
 	/// Number of buttons on our menu
 	static const int m_optionCount = 5;
@@ -46,5 +46,7 @@ public:
 	void update(sf::RenderWindow&);
 
 	void draw(sf::RenderWindow& window);
+
+	int getSelectionNumber();
 };
 

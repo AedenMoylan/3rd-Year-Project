@@ -26,6 +26,7 @@ Game::Game() :
 	setupFontAndText(); // load font 
 	setupSprite(); // load texture
 
+	selectionNumber = 4;
 	m_menu.initialise(m_ArialBlackfont);
 	m_shop.initialise(m_ArialBlackfont);
 	m_controls.initialise(m_ArialBlackfont);
@@ -60,6 +61,8 @@ void Game::run()
 
 /// <summary>
 /// Update the game world
+/// The selection number is used to determine which game state the game should change to.
+/// 1 = gameplay, 2 = shop, 3 = controls, 4 = main menu
 /// </summary>
 /// <param name="t_deltaTime">time interval per frame</param>
 void Game::update(sf::Time t_deltaTime)
@@ -72,16 +75,18 @@ void Game::update(sf::Time t_deltaTime)
 	{
 	case GameState::GAME_MENU:
 		m_menu.update(m_window);
-
+		selectionNumber = m_menu.getSelectionNumber();
 		break;
 
 	case GameState::GAME_SHOP:
 		m_shop.update(m_window);
+		selectionNumber = m_shop.getSelectionNumber();
 
 		break;
 		
 	case GameState::GAME_CONTROLS:
 		m_controls.update(m_window);
+		selectionNumber = m_controls.getSelectionNumber();
 	}
 }
 
@@ -90,25 +95,31 @@ void Game::update(sf::Time t_deltaTime)
 /// </summary>
 void Game::render()
 {
+	if (selectionNumber == 1)
+	{
+		m_gameState = GameState::GAME_PLAY;
+	}
+
+	if (selectionNumber == 2)
+	{
+		m_gameState = GameState::GAME_SHOP;
+	}
+
+	if (selectionNumber == 3)
+	{
+		m_gameState = GameState::GAME_CONTROLS;
+	}
+
+	if (selectionNumber == 4)
+	{
+		m_gameState = GameState::GAME_MENU;
+	}
+
 	switch (m_gameState)
 	{
 	case GameState::GAME_MENU:
 		m_menu.draw(m_window);
 
-		if (m_menu.getSelectionNumber() == 1)
-		{
-			m_gameState = GameState::GAME_PLAY;
-		}
-
-		if (m_menu.getSelectionNumber() == 2)
-		{
-			m_gameState = GameState::GAME_SHOP;
-		}
-
-		if (m_menu.getSelectionNumber() == 3)
-		{
-			m_gameState = GameState::GAME_CONTROLS;
-		}
 
 		break;
 
@@ -126,7 +137,6 @@ void Game::render()
 
 	case GameState::GAME_CONTROLS:
 		m_controls.draw(m_window);
-		std::cout << "Game Controls" << std::endl;
 
 		break;
 	}

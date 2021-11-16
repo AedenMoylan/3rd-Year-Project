@@ -13,7 +13,7 @@ class Menu
 	/// <summary>
 	/// used to change the gamestates when a button is pressed
 	/// </summary>
-	int selectionNumber = 0;
+	int selectionNumber = 4;
 	
 	/// Number of buttons on our menu
 	static const int m_optionCount = 4;

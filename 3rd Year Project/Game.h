@@ -30,6 +30,7 @@ private:
 	void setupFontAndText();
 	void setupSprite();
 
+	int selectionNumber;
 	sf::RenderWindow m_window; // main SFML window
 	sf::Font m_ArialBlackfont; // font used by message
 	sf::Texture m_logoTexture; // texture used for sfml logo

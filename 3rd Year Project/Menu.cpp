@@ -44,7 +44,7 @@ void Menu::initialise(sf::Font& font)
 
 void Menu::update(sf::Window& window)
 {
-	selectionNumber = 0;
+	selectionNumber = 4;
 	if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left))
 	{
 		sf::Vector2i mouseLocation;
@@ -77,6 +77,7 @@ void Menu::update(sf::Window& window)
 
 void Menu::draw(sf::RenderWindow& window)
 {
+	window.clear();
 	window.draw(menuBgSprite);
 
 	for (int i = 0; i < m_optionCount; i++)

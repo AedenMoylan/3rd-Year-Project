@@ -1,3 +1,2 @@
-﻿  Controls.cpp
-G:\nastava\3rd-Year-Project\3rd Year Project\Controls.cpp(15,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  3rd Year Project.vcxproj -> G:\nastava\3rd-Year-Project\Debug\3rd Year Project.exe
+﻿  Game.cpp
+  3rd Year Project.vcxproj -> C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\joint project sksk\3rd-Year-Project\Debug\3rd Year Project.exe

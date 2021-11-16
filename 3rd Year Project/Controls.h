@@ -8,6 +8,15 @@
 class Controls {
 public:
 
+
+
+	void initialise(sf::Font&);
+	void update(sf::Window&);
+	void draw(sf::RenderWindow& window);
+	int getSelectionNumber();
+private:
+
+
 	GameState myGameState;
 
 	sf::Texture m_buttonTexture;
@@ -29,18 +38,13 @@ public:
 
 
 	float m_topOffset = 0;
-	float m_leftOffset = 500;
-	float m_verticalSpacing = 400;
+	float m_leftOffset = 525;
+	float m_verticalSpacing = 500;
 	float m_buttonWidth = 100;
 	float m_buttonHeight = 70;
 
 
-	void initialise(sf::Font&);
-	void update(sf::Window&);
-	void draw(sf::RenderWindow& window);
 
-	int selection;
-
-private:
+	int selectionNumber;
 
 };

@@ -44,7 +44,7 @@ void Shop::initialise(sf::Font& font)
 
 void Shop::update(sf::RenderWindow& window)
 {
-	selectionNumber = 0;
+	selectionNumber = 2;
 	if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left))
 	{
 		sf::Vector2i mouseLocation;
@@ -53,48 +53,26 @@ void Shop::update(sf::RenderWindow& window)
 		{
 			if (mouseLocation.x < m_leftOffset * 2 && mouseLocation.x > 0)
 			{
-				selectionNumber = 1;
 				std::cout << "Speed Acquired" << std::endl;
 			}
 			if (mouseLocation.x < m_leftOffset * 4 && mouseLocation.x > m_leftOffset * 2)
-			{
-				selectionNumber = 2;
+			{				
 				std::cout << "Armor Acquired" << std::endl;
 			}
 			if (mouseLocation.x < m_leftOffset * 6 && mouseLocation.x > m_leftOffset * 4)
-			{
-				selectionNumber = 3;
+			{				
 				std::cout << "Empty 1" << std::endl;
 			}
 			if (mouseLocation.x < m_leftOffset * 8 && mouseLocation.x > m_leftOffset * 6)
-			{
-				selectionNumber = 4;
+			{				
 				std::cout << "Empty 2" << std::endl;
 			}
 			if (mouseLocation.x < m_leftOffset * 10 && mouseLocation.x > m_leftOffset * 8)
 			{
-				selectionNumber = 5;
+				selectionNumber = 1;
 				myGameState = GameState::GAME_PLAY;
 			}
 
-			if (selectionNumber == 1)
-			{
-
-			}
-			else if (selectionNumber == 2)
-			{
-
-			}
-			else if (selectionNumber == 3)
-			{
-
-			}
-			else if (selectionNumber == 4)
-			{
-
-			}
-
-			std::cout << selectionNumber << std::endl;
 		}
 	}
 }
@@ -109,3 +87,9 @@ void Shop::draw(sf::RenderWindow& window)
 		window.draw(m_buttonTexts[i]);
 	}
 }
+
+int Shop::getSelectionNumber()
+{
+	return selectionNumber;
+}
+
