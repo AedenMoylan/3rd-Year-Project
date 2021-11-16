@@ -30,6 +30,7 @@ Game::Game() :
 	m_menu.initialise(m_ArialBlackfont);
 	m_shop.initialise(m_ArialBlackfont);
 	m_controls.initialise(m_ArialBlackfont);
+	m_gamePlay.initialise(m_ArialBlackfont);
 }
 
 Game::~Game()
@@ -87,6 +88,13 @@ void Game::update(sf::Time t_deltaTime)
 	case GameState::GAME_CONTROLS:
 		m_controls.update(m_window);
 		selectionNumber = m_controls.getSelectionNumber();
+
+		break;
+
+	case GameState::GAME_PLAY:
+		m_gamePlay.update(m_window);
+
+
 	}
 }
 
@@ -125,7 +133,7 @@ void Game::render()
 
 	case GameState::GAME_PLAY:
 
-		std::cout << "Game Play" << std::endl;
+		m_gamePlay.draw(m_window);
 
 		break;
 		 
